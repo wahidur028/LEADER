@@ -46,10 +46,10 @@ os.makedirs(output_dir, exist_ok=True)
 # ------------------------------
 # Configurations
 # ------------------------------
-POPULATION_SIZE = 3
+POPULATION_SIZE = 50
 P_CROSSOVER = 0.9
 P_MUTATION = 0.2
-MAX_GENERATIONS = 3
+MAX_GENERATIONS = 50
 HALL_OF_FAME_SIZE = 5
 FEATURE_PENALTY_FACTOR = 0.001
 RANDOM_SEED = 42
