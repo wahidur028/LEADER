@@ -251,4 +251,5 @@ transaction_cost = 0.001    # 0.1% per trade
 All outputs are saved under `reports/`:
 
   * `reports/RL_results/`: Detailed per-segment training and testing logs.
+  * `reports/academic_results/`: Overall performance summaries.
 -----
