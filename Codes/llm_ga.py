@@ -677,7 +677,7 @@ class CryptoDataProcessor:
         return X_train_normalized, X_test_normalized, scaler
 
 # ------------------------------
-# Tiny DQN Classifier
+# Lightweight RL-based Q-evaluator (LQE)
 # ------------------------------
 class _TinyQ(nn.Module):
     def __init__(self, obs_dim, hidden=128, n_actions=2):
