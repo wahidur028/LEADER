@@ -91,7 +91,7 @@ pip install -r requirements.txt
 
 Stage 1 requires a locally running LLM, managed via **Ollama** and accessed through `langchain_ollama`.
 
-1.  **Install and run Ollama.**
+1.  **Install and run [Ollama](https://ollama.com/download/linux).**
 
 2.  **Pull a model** (e.g., a large model like Llama 3.3 70B is used for the best results in the paper):
 
