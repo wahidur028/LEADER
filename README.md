@@ -126,7 +126,7 @@ The scripts currently define a constant path: `FILE_PATH = "/path/to/your/crypto
 
 This phase generates a Hall-of-Fame (HoF) of feature subsets.
 
-1.  Edit `FILE_PATH` and the `feature_columns` list in `llm_ga.py` to match your data and feature space.
+1.  Edit `FILE_PATH`, the `feature_columns`, `market_context`, and  list in `llm_ga.py` to match your data and feature space.
 
 2.  Run the script:
 
