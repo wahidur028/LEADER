@@ -24,16 +24,19 @@ The core implementation files and output directories are organized as follows:
 
 ```text
 .
-├── LEADER_for_ACL2026.pdf      # Manuscript describing the LEADER framework
+├── README.md                     # Project documentation
+├── requirements.txt              # Python dependencies
+├── LEADER.pdf                    # Manuscript (to be added soon)
 ├── Data/
-│   └── data.csv                # Input market data (time-ordered crypto signals)
+│   └── data.csv                  # Input bitcoin market data (time-ordered crypto signals)
 └── Codes/
-    ├── llm_ga.py               # Stage 1: LLM-guided GA + lightweight Q-evaluator (LQE)
-    ├── rl_dqn.py               # Stage 2: Walk-forward DQN trading engine
-    └── reports/                # Output directory (created at runtime)
-        ├── ga_with_llm/        # GA logs, HOF feature sets, system info
-        ├── RL_results/         # Walk-forward segment-level RL outputs
-        └── academic_results/   # Backtest metrics, tables for the paper
+    ├── llm_ga.py                 # Stage 1: LLM-guided GA + lightweight Q-evaluator (LQE)
+    ├── rl_dqn.py                 # Stage 2: Walk-forward DQN trading engine
+    └── reports/                  # Output directory (created at runtime)
+        ├── ga_with_llm/          # GA logs, HoF feature sets, system info
+        ├── RL_results/           # Walk-forward segment-level RL outputs
+        └── academic_results/     # Backtest metrics, tables for the paper
+
 ````
 
 -----
