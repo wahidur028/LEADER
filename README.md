@@ -32,6 +32,7 @@ The core implementation files and output directories are organized as follows:
 └── Codes/
     ├── llm_ga.py                 # Stage 1: LLM-guided GA + lightweight Q-evaluator (LQE)
     ├── rl_dqn.py                 # Stage 2: Walk-forward DQN trading engine
+    ├── data_processing.py        # Feature engineering using TA-Lib
     └── reports/                  # Output directory (created at runtime)
         ├── ga_with_llm/          # GA logs, HoF feature sets, system info
         ├── RL_results/           # Walk-forward segment-level RL outputs
