@@ -28,7 +28,8 @@ The core implementation files and output directories are organized as follows:
 ├── requirements.txt              # Python dependencies
 ├── LEADER.pdf                    # Manuscript (to be added soon)
 ├── Data/
-│   └── crypto_signals.csv        # Input bitcoin market data (time-ordered crypto signals)
+    ├── BTC(2015to2025).csv       # Bitcoin raw market data
+    └── crypto_signals.csv        # Input bitcoin market data (time-ordered crypto signals)
 └── Codes/
     ├── llm_ga.py                 # Stage 1: LLM-guided GA + lightweight Q-evaluator (LQE)
     ├── rl_dqn.py                 # Stage 2: Walk-forward DQN trading engine
