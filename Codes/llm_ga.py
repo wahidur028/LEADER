@@ -343,11 +343,16 @@ class LLMGuidedInitializer:
 PROMPT_TEMPLATES = {
     'initial_population': """You are an expert in genetic algorithms and cryptocurrency feature selection for a {market_context} market.
 
-Your task is to generate an initial population of {pop_size} diverse feature subsets. Use the glossary to understand abbreviations.
+Your task is to generate an initial population of EXACTLY {pop_size} distinct and diverse feature subsets. Use the glossary to understand abbreviations.
+If you cannot produce EXACTLY {pop_size} subsets, DO NOT guess. Instead, return: {{\"error\": \"generation_failed\"}}.
 
 **Important formatting rule**
 - In your JSON, **always list features by their ORIGINAL column names** (exact strings from `Available Features`).
 - In reasoning fields, you may refer to **canonical names** from `feature_glossary` for clarity.
+- You MUST return EXACTLY {pop_size} items in "feature_subsets".
+- No fewer, no more.
+- Every subset MUST be unique.
+- Use ONLY feature names exactly as they appear in `Available Features`.
 
 **Context**
 - Available Features (original names): {features}
@@ -367,7 +372,7 @@ Your task is to generate an initial population of {pop_size} diverse feature sub
   "chain_of_thought": "High-level strategy (1–2 short paragraphs).",
   "feature_subsets": [
     {{
-      "subset_id": 1,
+      "subset_id": <1 to {pop_size}>,
       "features": ["<ORIGINAL_NAME_1>", "<ORIGINAL_NAME_2>", "..."],
       "strategy": "conservative | balanced | aggressive",
       "reasoning": "Short justification using canonical names where helpful.",
@@ -375,9 +380,9 @@ Your task is to generate an initial population of {pop_size} diverse feature sub
     }}
   ],
   "population_strategy": {{
-    "diversity_approach": "...",
-    "size_distribution": "...",
-    "coverage_analysis": "..."
+    "diversity_approach": "Explain structural + strategic diversity briefly.",
+    "size_distribution": "Summary of subset size spread.",
+    "coverage_analysis": "Summary of category coverage."
   }}
 }}
 """,
